@@ -6,6 +6,10 @@ const commentSchema = new Schema(
     body: {
       type: String,
       required: true
+    },
+    owner: {
+      type: Schema.Types.ObjectId,
+      required: true
     }
   },
   {
