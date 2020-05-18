@@ -8,7 +8,7 @@ mongoose
     useCreateIndex: true,
     useFindAndModify: false
   })
-  .then(() => console.log("Connected to Atlas"))
+  .then(() => console.log("Connected to Atlas for posts"))
   .catch((err) => {
     console.log(err.message);
     process.exit(1);
