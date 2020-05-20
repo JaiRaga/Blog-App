@@ -9,7 +9,7 @@ const CommentList = ({ postId }) => {
       `http://localhost:9007/api/posts/${postId}/comments`
     );
 
-    setComment([res.data]);
+    setComment([...res.data]);
   };
 
   useEffect(() => {
@@ -23,8 +23,6 @@ const CommentList = ({ postId }) => {
       return <li key={comment._id}>{comment.body}</li>;
     });
   }
-
-  console.log(rendererComment, comments);
 
   return <ul>{comments.length !== 0 ? rendererComment : "No Comments"}</ul>;
 };
